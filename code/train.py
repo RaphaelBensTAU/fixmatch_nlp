@@ -39,8 +39,8 @@ ONE_HOT_THRESHOLD = 0.6
 weak_augment = lambda x : augment_data(x, WEAK_SR, WEAK_SI, WEAK_RS, WEAK_RD, 1)
 strong_augment = lambda x : augment_data(x, STRONG_SR, STRONG_SI, STRONG_RS, STRONG_RD, 1)
 
-train_data = pd.read_csv('train.csv')
-test_data = pd.read_csv('test.csv')
+train_data = pd.read_csv('data/train.csv')
+test_data = pd.read_csv('data/test.csv')
 
 def augment_data(lst_of_sentences, alpha_sr, alpha_ri, alpha_rs, p_rd, num_aug):
     return np.array([eda.eda(sentence, alpha_sr, alpha_ri, alpha_rs, p_rd, num_aug) for sentence in lst_of_sentences])
