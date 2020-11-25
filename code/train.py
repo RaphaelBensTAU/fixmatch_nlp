@@ -12,8 +12,6 @@ from torch import nn
 from torch.nn.utils import clip_grad_norm_
 from IPython.display import clear_output
 
-
-
 #HYPERPARAMETERS
 #AUGMENTATION
 WEAK_SR = 0.1
@@ -136,4 +134,3 @@ for ep in range(NUM_OF_EPOCHS):
         print('Epoch: ', ep + 1)
         print("\r" + "{0}/{1} loss: {2} ".format(batch_num, len(train_l) / LABELED_BATCH_SIZE, loss / (batch_num + 1)))
         
-
